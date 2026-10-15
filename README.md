@@ -1,8 +1,13 @@
-# Belif Skincare demo
+# belif_skincare
 
-Responsive, dependency-free HTML/CSS/JS concept for Nazia Sayed. Open dist/index.html or serve dist with Python's http.server. Uses CSS perspective, dimensional product illustrations, pointer tilt, floating motion, IntersectionObserver scroll reveals, reduced-motion support, collection filtering and accessible product dialogs. WhatsApp links open drafts; nothing is sent automatically.
+# Belif Skincare by Nazia — demo
 
-## Content provenance
-Brand, owner, Nashik location, business phone and listed product names were checked against https://www.findglocal.com/IN/Nashik/468510583018159/Belif-Skincare-by-Nazia-Sayed on 15 October 2026. This is a public mirror of brand posts, not a verified Instagram profile. Exact Instagram handle could not be established; no guessed profile is linked. User supplied the WhatsApp response requesting a demo.
+Existing static storefront enhanced using the user-provided reference skills, Ponytail, compiled Tailwind and a bundled Three.js decorative hero. Build with npm install then npm run build; run npm run check. Serve dist/ for preview or open ../Belif Demo.html for the embedded single-file edition.
 
-Packaging, wordmark, colours and creative copy are proposed design concepts, not reproductions of existing packaging. No prices, reviews, clinical claims or certifications are fabricated. Product photos, exact ingredient lists, catalogue and final brand identity need Nazia's confirmation. Not affiliated with the unrelated international belif brand. This demo is owner-private by default; review access before sharing externally.
+ProductCard and ProductImageSwitcher are reusable functions in dist/app.js. dist/shop.css contains 400ms crossfade, responsive cards and gallery styling. Existing styling remains in dist/style.css. src/scene.js contains a motion-aware WebGL accent with a graceful fallback. scripts/build.mjs compiles dependencies and creates the portable artifact.
+
+Source identity: https://www.instagram.com/belif_skincare/ and https://www.findglocal.com/IN/Nashik/468510583018159/Belif-Skincare-by-Nazia-Sayed. Name, business contact and observed products are used; no prices or testimonials invented. WhatsApp buttons draft enquiries to +919145562289.
+
+The supplied image set is AI-generated concept artwork, not verified actual product photography. Five product pairs matched visually; all original source paths and unmatched items are recorded in image-manifest.json. Hover cards use verified-text fallbacks; unapproved information graphics can be reviewed in labelled galleries. No back-label photos were supplied. The 19 unmatched or unconfirmed assets have not been turned into new products.
+
+Sugar Cosmetics supplied layout inspiration (campaign hero, category navigation, aligned cards). No Sugar branding or assets copied. Belif here refers to Nazia's Nashik business, not the international cosmetics company.

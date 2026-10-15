@@ -1,0 +1,1208 @@
+/* Belif Skincare • Editorial & Beauty Storefront Style (Inspired by Sugar Cosmetics) */
+
+/* -------------------------------------------------------------------------- */
+/* Top Announcement Bar                                                       */
+/* -------------------------------------------------------------------------- */
+.top-announcement {
+  background: #1e3226;
+  color: #f7f4ea;
+  font-size: 10px;
+  letter-spacing: 1.8px;
+  padding: 8px 16px;
+  text-align: center;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.announcement-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.announcement-divider {
+  opacity: 0.5;
+  font-size: 8px;
+}
+.announcement-link {
+  color: #e5cb9f;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+.announcement-link:hover {
+  opacity: 0.85;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Site Header & Responsive Navigation                                        */
+/* -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(246, 243, 233, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 5%;
+  border-bottom: 1px solid var(--line);
+  gap: 20px;
+  transition: background 0.3s;
+}
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  color: var(--ink);
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+.menu-toggle .close-icon {
+  display: none;
+}
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.desktop-nav a {
+  position: relative;
+  transition: color 0.2s;
+  padding: 6px 0;
+}
+.desktop-nav a:hover {
+  color: #7b5836;
+}
+.desktop-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--ink);
+  transition: width 0.25s ease;
+}
+.desktop-nav a:hover::after {
+  width: 100%;
+}
+.nav-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #7e5a32 !important;
+  font-weight: 600;
+}
+.nav-instagram svg {
+  flex-shrink: 0;
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.header-ig-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: #ffffff60;
+  color: var(--ink);
+  transition: all 0.25s ease;
+}
+.header-ig-icon:hover {
+  background: #263c30;
+  color: #f6f3e9;
+  border-color: #263c30;
+  transform: translateY(-2px);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Mobile Navigation Drawer                                                   */
+/* -------------------------------------------------------------------------- */
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+.mobile-nav[hidden] {
+  display: none;
+}
+.mobile-nav-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 30, 23, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: fadeIn 0.25s ease-out;
+}
+.mobile-nav-drawer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: min(320px, 84vw);
+  background: #f6f3e9;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px;
+  z-index: 2;
+  animation: slideDrawer 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+}
+@keyframes slideDrawer {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.mobile-nav-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.mobile-nav-brand {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--ink);
+}
+.mobile-close-btn {
+  background: none;
+  border: 0;
+  font-size: 28px;
+  color: var(--ink);
+  line-height: 1;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+.mobile-nav-items {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+  gap: 4px;
+}
+.mobile-nav-items a {
+  padding: 12px 10px;
+  font-size: 16px;
+  font-family: 'Italiana', Georgia, serif;
+  color: var(--ink);
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.mobile-nav-items a:hover {
+  background: #ece8da;
+}
+.mobile-nav-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.mobile-ig-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #263c30;
+  color: #f6f3e9;
+  padding: 13px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+.mobile-wa-button {
+  display: block;
+  text-align: center;
+  font-size: 11px;
+  color: #4a5c48;
+  padding: 8px 4px;
+  text-decoration: underline;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Full-Screen TikTok / Reel Hero (Sugar Cosmetics Reference)                 */
+/* -------------------------------------------------------------------------- */
+.hero.reel-hero {
+  display: block;
+  grid-template-columns: none;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  background: #15221a;
+  overflow: hidden;
+}
+.hero-reel-container {
+  position: relative;
+  width: 100%;
+  height: clamp(540px, 76vh, 740px);
+  background: #111a14;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  background: #16241b;
+}
+
+/* Vignettes for cinematic contrast and text readability */
+.reel-vignette-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(180deg, rgba(16, 26, 20, 0.65) 0%, rgba(16, 26, 20, 0) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+.reel-vignette-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 380px;
+  background: linear-gradient(0deg, rgba(13, 22, 17, 0.88) 0%, rgba(13, 22, 17, 0.45) 55%, transparent 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Reel Interactive Controls: Sound & Play Toggle (Sugar Cosmetics style) */
+.reel-controls-bar {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.reel-control-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(18, 29, 23, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #f7f4ea;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+.reel-control-btn:hover {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1e3226;
+  transform: scale(1.08);
+}
+.sound-btn .icon-unmuted {
+  display: none;
+}
+.sound-btn.unmuted .icon-muted {
+  display: none;
+}
+.sound-btn.unmuted .icon-unmuted {
+  display: block;
+}
+.play-btn .icon-play {
+  display: none;
+}
+.play-btn.paused .icon-pause {
+  display: none;
+}
+.play-btn.paused .icon-play {
+  display: block;
+}
+
+/* Floating Reel Content Card */
+.reel-content-overlay {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  padding: 0 5% 70px;
+  max-width: 680px;
+}
+.reel-card {
+  color: #f7f4ea;
+}
+.reel-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.2px;
+  color: #dfd7be;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.reel-headline {
+  font-family: 'Italiana', Georgia, serif;
+  font-size: clamp(38px, 5.2vw, 76px);
+  line-height: 1.02;
+  letter-spacing: -1.5px;
+  margin: 0 0 16px;
+  color: #ffffff;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+.reel-headline em {
+  font-family: Georgia, serif;
+  font-style: italic;
+  color: #dfd2b0;
+}
+.reel-description {
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(246, 243, 233, 0.88);
+  max-width: 440px;
+  margin-bottom: 24px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+.reel-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.reel-btn-primary {
+  background: #f6f3e9 !important;
+  color: #1e3226 !important;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+.reel-btn-primary:hover {
+  background: #ffffff !important;
+  transform: translateY(-2px);
+}
+.reel-instagram-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 22px;
+  border-radius: 4px;
+  background: rgba(30, 48, 38, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #f7f4ea;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+.reel-instagram-pill:hover {
+  background: #ffffff;
+  color: #1e3226;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Reel Dots Indicator (Sugar Cosmetics reference) */
+.reel-dots-indicator {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.reel-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+.reel-dot.active {
+  background: #ffffff;
+  width: 22px;
+  border-radius: 10px;
+}
+
+/* Floating Monogram Badge (Sugar Cosmetics reference: bottom right) */
+.reel-brand-floating-badge {
+  position: absolute;
+  bottom: 20px;
+  right: 24px;
+  z-index: 10;
+  display: block;
+}
+.floating-badge-disc {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #18281f;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+  display: grid;
+  place-items: center;
+  transition: transform 0.3s ease;
+}
+.floating-badge-disc:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+.floating-badge-disc span {
+  font-family: 'Italiana', Georgia, serif;
+  font-size: 30px;
+  color: #e9e3d0;
+  line-height: 1;
+}
+
+/* -------------------------------------------------------------------------- */
+/* "SHOP BY CATEGORY" Showcase (Sugar Cosmetics layout)                       */
+/* -------------------------------------------------------------------------- */
+.category-showcase {
+  padding: 40px 5% 32px;
+  background: #f0eee3;
+  border-bottom: 1px solid var(--line);
+}
+.category-header-wrap {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.category-showcase-title {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 800;
+  font-size: clamp(20px, 2.4vw, 28px);
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+.category-showcase-sub {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+.category-strip {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(20px, 4.5vw, 64px);
+  padding: 10px 0;
+  background: transparent;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.category-strip::-webkit-scrollbar {
+  display: none;
+}
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.category-avatar-wrap {
+  position: relative;
+  width: clamp(84px, 10vw, 118px);
+  height: clamp(84px, 10vw, 118px);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ffffff;
+  box-shadow: 0 6px 20px rgba(38, 60, 48, 0.12);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s;
+  background: #dedfd5;
+}
+.category-avatar-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.category-avatar-wrap.gift-wrap {
+  display: grid;
+  place-items: center;
+  background: #decbb9;
+}
+.category-item:hover .category-avatar-wrap {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 12px 28px rgba(38, 60, 48, 0.2);
+}
+.category-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Product Cards & Catalog Layout                                             */
+/* -------------------------------------------------------------------------- */
+.ribbon {
+  display: none;
+}
+.collection {
+  padding-top: 65px;
+}
+.section-head h2 {
+  font-size: 48px;
+}
+.search-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 11px;
+  margin: 0 0 25px;
+  color: var(--muted);
+}
+.search-label input {
+  border: 1px solid #c5ccbc;
+  background: #fff9;
+  padding: 12px 16px;
+  border-radius: 4px;
+  font: inherit;
+  min-width: 250px;
+  color: var(--ink);
+}
+.products {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+.product {
+  min-width: 0;
+  background: #fff9;
+  border: 1px solid #e7e8de;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.image-switcher {
+  position: relative;
+  aspect-ratio: 1;
+  isolation: isolate;
+  background: #e9ebdf;
+  overflow: hidden;
+}
+.image-open {
+  padding: 0;
+  border: 0;
+  background: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: inherit;
+  text-align: left;
+  position: relative;
+}
+.front-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.info-overlay {
+  position: absolute;
+  inset: 0;
+  background: #edf0e5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  color: #263c30;
+  pointer-events: none;
+}
+.info-overlay > small {
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+.info-overlay strong {
+  font: 26px/1.1 'Italiana', Georgia, serif;
+  margin: 16px 0;
+}
+.info-overlay > span {
+  font: 11px/1.7 'DM Sans', sans-serif;
+}
+.info-overlay > b {
+  font-size: 10px;
+  margin-top: 16px;
+}
+.image-switcher.info-open .info-overlay {
+  opacity: 1;
+}
+.image-switcher.info-open .front-image {
+  opacity: 0;
+  transform: scale(1.035);
+}
+@media(hover: hover) and (pointer: fine) {
+  .image-switcher:hover .info-overlay,
+  .image-switcher:focus-within .info-overlay {
+    opacity: 1;
+  }
+  .image-switcher:hover .front-image,
+  .image-switcher:focus-within .front-image {
+    opacity: 0;
+    transform: scale(1.035);
+  }
+}
+.info-toggle {
+  border: 0;
+  border-bottom: 1px solid #e5e8dc;
+  background: #eef0e7;
+  color: #3d513a;
+  width: 100%;
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 10px;
+  display: flex;
+  justify-content: space-between;
+  min-height: 38px;
+  align-items: center;
+}
+.product-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex: 1;
+  padding: 18px 15px 15px;
+  gap: 0;
+}
+.product-meta p {
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+.product h3 {
+  font: 21px/1.2 'Italiana', Georgia, serif;
+  min-height: 52px;
+  margin: 5px 0 18px;
+}
+.product-meta .product-title {
+  font: inherit;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  text-align: left;
+  background: none;
+  padding: 0;
+  color: inherit;
+  cursor: pointer;
+}
+.product-enquire {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  background: #263c30;
+  color: #faf8ee;
+  padding: 12px 14px;
+  font-size: 10px;
+  border-radius: 3px;
+  font-weight: 500;
+  transition: background 0.25s;
+}
+.product-enquire:hover {
+  background: #192820;
+}
+.image-placeholder {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  gap: 15px;
+  text-align: center;
+  background: linear-gradient(135deg, #e5e8db, #d5d9c6);
+  font-family: Georgia, serif;
+}
+.image-placeholder > span {
+  font-size: 65px;
+}
+.image-placeholder small {
+  font: 10px 'DM Sans', sans-serif;
+  color: #68715f;
+}
+.collection-note {
+  max-width: 700px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Contact Section Instagram & WhatsApp Integration                           */
+/* -------------------------------------------------------------------------- */
+.contact-actions-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 30px auto 25px;
+  max-width: 500px;
+}
+.contact-instagram-btn {
+  background: transparent !important;
+  color: var(--cream) !important;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s ease;
+}
+.contact-instagram-btn:hover {
+  background: #f6f3e9 !important;
+  color: #263c30 !important;
+  border-color: #f6f3e9;
+  transform: translateY(-3px);
+}
+.contact-address {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 15px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Footer Social & Layout                                                     */
+/* -------------------------------------------------------------------------- */
+.site-footer {
+  padding: 45px 5% 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.footer-brand-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-tagline {
+  font-size: 12px;
+  margin: 0;
+  color: var(--muted);
+}
+.footer-social-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.footer-ig-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink);
+  transition: all 0.2s;
+}
+.footer-ig-badge:hover {
+  background: #263c30;
+  color: #f6f3e9;
+  border-color: #263c30;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Product Dialog                                                             */
+/* -------------------------------------------------------------------------- */
+#product-dialog {
+  width: min(960px, 94vw);
+  max-height: 90dvh;
+  padding: 38px;
+  overflow: auto;
+  border: 0;
+  border-radius: 12px;
+  background: var(--cream);
+  color: var(--ink);
+}
+#product-dialog::backdrop {
+  background: #1b302aca;
+  backdrop-filter: blur(5px);
+}
+#product-dialog[open] {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 30px;
+}
+#product-dialog .close {
+  z-index: 3;
+  background: #f6f3e9;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  line-height: 1;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  border: 0;
+  cursor: pointer;
+  font-size: 24px;
+}
+.detail-copy {
+  align-self: center;
+}
+.detail-copy h2 {
+  font-size: 40px;
+  letter-spacing: -1px;
+  margin: 10px 0 15px;
+}
+.gallery[hidden] {
+  display: none;
+}
+.gallery-stage {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #e9ebdf;
+}
+#gallery-zoom {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  overflow: auto;
+  cursor: zoom-in;
+  background: none;
+}
+#gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+#gallery-zoom.zoomed {
+  cursor: zoom-out;
+}
+#gallery-zoom.zoomed img {
+  width: 180%;
+  height: 180%;
+  max-width: none;
+}
+.gallery-arrow {
+  position: absolute;
+  top: 46%;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: #fffffff0;
+  color: #263c30;
+  cursor: pointer;
+  font-size: 16px;
+}
+.previous {
+  left: 8px;
+}
+.next {
+  right: 8px;
+}
+.gallery-thumbs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 14px;
+}
+.gallery-thumbs button {
+  padding: 3px;
+  border: 1px solid #ccd0c1;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+}
+.gallery-thumbs button[aria-pressed=true] {
+  border: 2px solid #3f573a;
+}
+.gallery-thumbs img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  display: block;
+}
+#gallery-caption {
+  font-size: 10px;
+  text-align: center;
+  color: var(--muted);
+  margin: 12px 0 0;
+}
+footer small a {
+  display: inline-block;
+  text-decoration: underline;
+  margin-top: 8px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Responsive Breakpoints (Mobile, Tablet, Desktop)                           */
+/* -------------------------------------------------------------------------- */
+@media(max-width: 1050px) {
+  .products {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .desktop-nav {
+    gap: 20px;
+  }
+}
+
+@media(max-width: 820px) {
+  .site-header {
+    padding: 14px 4%;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .logo {
+    font-size: 42px;
+  }
+  .top-announcement {
+    font-size: 9px;
+    padding: 6px 12px;
+  }
+}
+
+/* Mobile: TikTok & Reel Full Screen Hero Experience */
+@media(max-width: 640px) {
+  .hero-reel-container {
+    /* Full screen portrait reel aspect ratio like TikTok / Reels & Sugar Cosmetics mobile */
+    height: calc(100svh - 105px);
+    min-height: 520px;
+    max-height: 740px;
+    align-items: flex-end;
+  }
+  .hero-video {
+    object-fit: cover;
+    object-position: center;
+  }
+  .reel-content-overlay {
+    padding: 0 16px 42px;
+    max-width: 100%;
+  }
+  .reel-headline {
+    font-size: clamp(28px, 8.5vw, 42px);
+    letter-spacing: -1px;
+    line-height: 1.05;
+    margin-bottom: 8px;
+  }
+  .reel-eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+  }
+  .reel-description {
+    font-size: 11px;
+    line-height: 1.45;
+    margin-bottom: 14px;
+    max-width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .reel-cta-row {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .reel-btn-primary,
+  .reel-instagram-pill {
+    flex: 1;
+    width: auto;
+    justify-content: center;
+    padding: 12px 10px;
+    font-size: 11px;
+    min-height: 42px;
+  }
+  .reel-controls-bar {
+    bottom: 12px;
+    left: 12px;
+    gap: 8px;
+  }
+  .reel-control-btn {
+    width: 36px;
+    height: 36px;
+  }
+  .reel-dots-indicator {
+    bottom: 14px;
+  }
+  .reel-brand-floating-badge {
+    bottom: 10px;
+    right: 12px;
+  }
+  .floating-badge-disc {
+    width: 38px;
+    height: 38px;
+  }
+  .floating-badge-disc span {
+    font-size: 22px;
+  }
+
+  /* Category Showcase on Mobile */
+  .category-showcase {
+    padding: 30px 4% 25px;
+  }
+  .category-showcase-title {
+    font-size: 22px;
+    letter-spacing: 1.5px;
+  }
+  .category-strip {
+    justify-content: flex-start;
+    padding-inline: 4px;
+    gap: 18px;
+  }
+  .category-avatar-wrap {
+    width: 80px;
+    height: 80px;
+  }
+  .category-avatar-wrap.gift-wrap span {
+    font-size: 40px;
+  }
+  .category-label {
+    font-size: 9px;
+    letter-spacing: 0.8px;
+  }
+
+  /* Catalog on Mobile */
+  .products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .product-meta {
+    padding: 12px 10px;
+  }
+  .product h3 {
+    font-size: 18px;
+    min-height: 44px;
+    margin-bottom: 12px;
+  }
+  .product-enquire {
+    font-size: 9px;
+    padding: 10px 8px;
+  }
+  .filters {
+    gap: 8px;
+    margin: 12px 0 20px;
+  }
+  .filters button {
+    padding: 9px 15px;
+    font-size: 10px;
+    min-height: 44px;
+  }
+  .search-label {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+  .search-label input {
+    min-width: 0;
+    width: 100%;
+  }
+
+  /* Story, Gifting, Steps on Mobile */
+  .story, .gifting {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 55px 5%;
+  }
+  .story-art {
+    height: 360px;
+  }
+  .step-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Contact & Footer on Mobile */
+  .contact {
+    padding: 55px 5%;
+  }
+  .contact-actions-wrap {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+  }
+  .contact-actions-wrap .button {
+    width: 100%;
+    justify-content: center;
+    min-height: 46px;
+  }
+  .site-footer {
+    padding: 35px 5% 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  
+  #product-dialog[open] {
+    grid-template-columns: 1fr;
+    padding: 32px 16px 20px;
+    gap: 20px;
+  }
+  .gallery-stage {
+    max-height: 45dvh;
+  }
+}
+
+@media(max-width: 360px) {
+  .logo {
+    font-size: 36px;
+  }
+  .products {
+    grid-template-columns: 1fr;
+  }
+  .category-avatar-wrap {
+    width: 70px;
+    height: 70px;
+  }
+  .reel-headline {
+    font-size: 32px;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  .front-image, .info-overlay, .category-avatar-wrap {
+    transition: none !important;
+  }
+}
+.paused .front-image, .paused .info-overlay {
+  transition: none;
+}

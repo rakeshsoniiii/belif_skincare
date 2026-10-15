@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "sourceStatus": "User-supplied concept artwork, not verified brand photography",
+  "products": [
+    {
+      "slug": "anti-acne-gel",
+      "name": "Anti Acne Gel",
+      "hoverApproved": false,
+      "assetType": "user-supplied AI-generated concept artwork",
+      "note": "Pair identity visually matched. Packaging, ingredients, efficacy and SPF claims are unverified; do not present information artwork as verified product facts.",
+      "front": {
+        "src": "images/products/anti-acne-gel/front.webp",
+        "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_26 AM-1.png",
+        "width": 1200,
+        "height": 1200
+      },
+      "info": {
+        "src": "images/products/anti-acne-gel/info.webp",
+        "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_27 AM-2.png",
+        "width": 1200,
+        "height": 1200
+      }
+    },
+    {
+      "slug": "glow-brightening-lotion",
+      "name": "Glow & Brightening Lotion",
+      "hoverApproved": false,
+      "assetType": "user-supplied AI-generated concept artwork",
+      "note": "Pair identity visually matched. Packaging, ingredients, efficacy and SPF claims are unverified; do not present information artwork as verified product facts.",
+      "front": {
+        "src": "images/products/glow-brightening-lotion/front.webp",
+        "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_29 AM-3.png",
+        "width": 1200,
+        "height": 1200
+      },
+      "info": {
+        "src": "images/products/glow-brightening-lotion/info.webp",
+        "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_30 AM-4.png",
+        "width": 1200,
+        "height": 1200
+      }
+    },
+    {
+      "slug": "herbal-hair-powder",
+      "name": "Herbal Hair Powder",
+      "hoverApproved": false,
+      "assetType": "user-supplied AI-generated concept artwork",
+      "note": "Pair identity visually matched. Packaging, ingredients, efficacy and SPF claims are unverified; do not present information artwork as verified product facts.",
+      "front": {
+        "src": "images/products/herbal-hair-powder/front.webp",
+        "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_32 AM-5.png",
+        "width": 1200,
+        "height": 1200
+      },
+      "info": {
+        "src": "images/products/herbal-hair-powder/info.webp",
+        "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_33 AM-6.png",
+        "width": 1200,
+        "height": 1200
+      }
+    },
+    {
+      "slug": "onion-bhringraj-hair-mask",
+      "name": "Onion & Bhringraj Hair Mask",
+      "hoverApproved": false,
+      "assetType": "user-supplied AI-generated concept artwork",
+      "note": "Pair identity visually matched. Packaging, ingredients, efficacy and SPF claims are unverified; do not present information artwork as verified product facts.",
+      "front": {
+        "src": "images/products/onion-bhringraj-hair-mask/front.webp",
+        "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_35 AM-7.png",
+        "width": 1200,
+        "height": 1200
+      },
+      "info": {
+        "src": "images/products/onion-bhringraj-hair-mask/info.webp",
+        "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_37 AM-8.png",
+        "width": 1200,
+        "height": 1200
+      }
+    },
+    {
+      "slug": "kojic-night-cream",
+      "name": "Kojic Night Cream",
+      "hoverApproved": false,
+      "assetType": "user-supplied AI-generated concept artwork",
+      "note": "Pair identity visually matched. Packaging, ingredients, efficacy and SPF claims are unverified; do not present information artwork as verified product facts.",
+      "front": {
+        "src": "images/products/kojic-night-cream/front.webp",
+        "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_39 AM-9.png",
+        "width": 1200,
+        "height": 1200
+      },
+      "info": {
+        "src": "images/products/kojic-night-cream/info.webp",
+        "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_40 AM-10.png",
+        "width": 1200,
+        "height": 1200
+      }
+    }
+  ],
+  "unmatched": [
+    {
+      "index": 0,
+      "source": "images/ChatGPT Image Oct 15, 2026, 05_00_56 AM-1.png",
+      "reason": "Not assigned: product identity or matching alternate needs catalog confirmation."
+    },
+    {
+      "index": 1,
+      "source": "images/ChatGPT Image Oct 15, 2026, 05_00_57 AM-2.png",
+      "reason": "Not assigned: product identity or matching alternate needs catalog confirmation."
+    },
+    {
+      "index": 2,
+      "source": "images/ChatGPT Image Oct 15, 2026, 05_00_58 AM-3.png",
+      "reason": "Not assigned: product identity or matching alternate needs catalog confirmation."
+    },
+    {
+      "index": 3,
+      "source": "images/ChatGPT Image Oct 15, 2026, 05_01_00 AM-4.png",
+      "reason": "Not assigned: product identity or matching alternate needs catalog confirmation."
+    },
+    {
+      "index": 4,
+      "source": "images/ChatGPT Image Oct 15, 2026, 05_01_01 AM-5.png",
+      "reason": "Not assigned: product identity or matching alternate needs catalog confirmation."
+    },
+    {
+      "index": 5,
+      "source": "images/ChatGPT Image Oct 15, 2026, 05_01_02 AM-6.png",
+      "reason": "Not assigned: product identity or matching alternate needs catalog confirmation."
+    },
+    {
+      "index": 6,
+      "source": "images/ChatGPT Image Oct 15, 2026, 05_01_03 AM-7.png",
+      "reason": "Not assigned: product identity or matching alternate needs catalog confirmation."
+    },
+    {
+      "index": 7,
+      "source": "images/ChatGPT Image Oct 15, 2026, 05_01_04 AM-8.png",
+      "reason": "Not assigned: product identity or matching alternate needs catalog confirmation."
+    },
+    {
+      "index": 8,
+      "source": "images/ChatGPT Image Oct 15, 2026, 05_01_05 AM-9.png",
+      "reason": "Not assigned: product identity or matching alternate needs catalog confirmation."
+    },
+    {
+      "index": 19,
+      "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_47 AM-1.png",
+      "reason": "Not assigned: product identity or matching alternate needs catalog confirmation."
+    },
+    {
+      "index": 20,
+      "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_48 AM-2.png",
+      "reason": "Not assigned: product identity or matching alternate needs catalog confirmation."
+    },
+    {
+      "index": 21,
+      "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_49 AM-3.png",
+      "reason": "Not assigned: product identity or matching alternate needs catalog confirmation."
+    },
+    {
+      "index": 22,
+      "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_50 AM-4.png",
+      "reason": "Not assigned: product identity or matching alternate needs catalog confirmation."
+    },
+    {
+      "index": 23,
+      "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_51 AM-5.png",
+      "reason": "Not assigned: product identity or matching alternate needs catalog confirmation."
+    },
+    {
+      "index": 24,
+      "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_53 AM-6.png",
+      "reason": "Not assigned: product identity or matching alternate needs catalog confirmation."
+    },
+    {
+      "index": 25,
+      "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_54 AM-7.png",
+      "reason": "Not assigned: product identity or matching alternate needs catalog confirmation."
+    },
+    {
+      "index": 26,
+      "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_55 AM-8.png",
+      "reason": "Not assigned: product identity or matching alternate needs catalog confirmation."
+    },
+    {
+      "index": 27,
+      "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_56 AM-9.png",
+      "reason": "Not assigned: product identity or matching alternate needs catalog confirmation."
+    },
+    {
+      "index": 28,
+      "source": "images/in hover/ChatGPT Image Oct 15, 2026, 05_03_58 AM-10.png",
+      "reason": "Not assigned: product identity or matching alternate needs catalog confirmation."
+    }
+  ]
+}
