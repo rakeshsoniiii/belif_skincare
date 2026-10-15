@@ -16,4 +16,10 @@ for(const src of ['media/gemini_generated_video_eb90fa9e.mp4','images/gemini_gen
     html=html.replaceAll(`src="${src}"`,'src="data:video/mp4;base64,'+readFileSync('dist/media/belif-hero.mp4').toString('base64')+'"');
   }
 }
+import {copyFileSync} from 'node:fs';
+for(const f of ['index.html','style.css','shop.css','tailwind.css','app.js','scene.js']){
+  copyFileSync('dist/'+f, f);
+  copyFileSync('dist/'+f, 'docs/'+f);
+}
 writeFileSync('../Belif Demo.html',html);console.log('Built Three.js, Tailwind and standalone demo.');
+
